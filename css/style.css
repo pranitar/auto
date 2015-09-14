@@ -1,7 +1,22 @@
 body,html{
 	background-color: grey;
 }
-img{
-	width: 50%;
-	height: 50%;
+.container{
+	width:375px;
+	background-image: url('../images/lexus_birdseye.jpg');
+	background-size: cover;
 }
+img.nav-icon{
+width: 160px;
+height: 160px;
+border-radius: 20px;
+background-color: white;
+opacity: 0.8;
+blur: 30px; /* I don’t know the vendor prefixes for this */
+padding: 40px;
+margin: 5px;
+}
+
+/* Music Note Icon: */
+/*background: #566573;
+border-radius: 10px;*/
