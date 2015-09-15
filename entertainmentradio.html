@@ -49,8 +49,7 @@
     <br>
 
      <div class="row">
-        <div class="col-xs-12 col-sm-12 text-center">
-          <h2>107.7 FM</h2>
+        <div class="col-xs-12 col-sm-12 text-center", id = "station">
         </div>
     </div>
 
@@ -97,6 +96,12 @@
 
 
     </div>
+<script>
+    var data = JSON.parse(localStorage.getItem("local"));
+    data.entertainment.current_setting = "radio";
+    document.getElementById("station").innerHTML = "<h2>"+ data.radio.current_station +"</h2>";
+    localStorage.setItem("local", JSON.stringify(data));
+</script>
 </body>
 
 </html>

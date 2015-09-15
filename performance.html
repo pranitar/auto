@@ -36,7 +36,7 @@
         </div>
 
         <div class="row"> 
-            <div class="col-xs-12"><center><h2 id="speed">48 MPH</h2></center></div>
+            <div class="col-xs-12"><center><h2 id="speed"></h2></center></div>
         </div>
 
         <div class="row">
@@ -44,7 +44,7 @@
                 <h3>Average MPG</h3>
             </div>
             <div class="col-xs-3">
-                <h3>27.9</h3>
+                <h3 id = "avg_mph"></h3>
             </div>
         </div>
 
@@ -53,7 +53,7 @@
                 <h3>Miles</h3>
             </div>
             <div class="col-xs-3">
-                <h3>10,205</h3>
+                <h3 id = "miles"></h3>
             </div>
         </div>
 
@@ -62,11 +62,19 @@
                 <h3>This Trip</h3>
             </div>
             <div class="col-xs-3">
-                <h3>1004.3</h3>
+                <h3 id = "this_trip"></h3>
             </div>
         </div>
 
     </div>
+<script>
+    var data = JSON.parse(localStorage.getItem("local"));
+    document.getElementById("speed").innerHTML = data.performance.mph + " MPH";
+    document.getElementById("avg_mph").innerHTML = data.performance.avg_mph;
+    document.getElementById("miles").innerHTML = data.performance.miles.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.getElementById("this_trip").innerHTML = data.performance.this_trip.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+</script>
+
 </body>
 
 </html>

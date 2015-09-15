@@ -43,7 +43,7 @@
                 <span class="h3">Gas</span>
             </div>
             <div class="col-xs-3">
-                <span class="h3" style="color:#FF9800">45%</span>
+                <span class="h3" id="gas" style="color:#FF9800">45%</span>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
                 <span class="h3">Oil</span>
             </div>
             <div class="col-xs-3">
-                <span class="h3" style="color:#F44336;">22%</span>
+                <span class="h3" id="oil" style="color:#F44336;">22%</span>
             </div>
         </div>
 
@@ -61,7 +61,7 @@
                 <span class="h3">Wiper Fluid</span>
             </div>
             <div class="col-xs-3">
-                <span class="h3" style="color:#8BC34A">87%</span>
+                <span class="h3" id="wiper_fluid" style="color:#8BC34A">87%</span>
             </div>
         </div>
 
@@ -92,6 +92,13 @@
         </div>
 
     </div>
+
+<script>
+    var data = JSON.parse(localStorage.getItem("local"));
+    document.getElementById("gas").innerHTML = data.maintenance.gas +"%";
+    document.getElementById("oil").innerHTML = data.maintenance.oil +"%";
+    document.getElementById("wiper_fluid").innerHTML = data.maintenance.wiper_fluid +"%";
+</script>
 
 </body>
 
