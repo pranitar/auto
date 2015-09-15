@@ -11,18 +11,17 @@
 
     <title>AUTO</title>
 
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
     <script src="js/bootstrap-switch.min.js"></script>
+
+    <link href="css/style.css" rel="stylesheet"> 
     <script src="js/script.js"></script>
-
-
 </head>
 
 <body>
@@ -79,34 +78,24 @@
     <div class="row">
         <div class="col-xs-6 col-sm-6 text-center">
           <p>
-            <label for="amount">Volume:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <label for="amount">Volume</label>
+            <!-- <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold; width:25px;"> -->
           </p>
  
-          <div id="slider-vertical" style="height:200px;"></div>
+          <center><div id="volumeslider" style="height:125px;"></div></center>
         </div>
-        
         <div class="col-xs-6 col-sm-6 text-center">
           <p>
-            <label for="amount">Volume:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <label for="amount">Orientation</label>
+            <!-- <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold; width:25px;"> -->
           </p>
  
-            <div id="slider-vertical" style="height:200px;"></div>
+          <center><div id="orientationslider" style="height:125px;"></div></center>
         </div>
     </div>
 
-        <!-- /.row -->
 
     </div>
-    <!-- /.container -->
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
