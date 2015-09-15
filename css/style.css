@@ -103,20 +103,21 @@ img.nav-icon{
 
 }
 
-#tiretopright{
-	width: 50px;
+.tire {
+	width: 46px; /* makes up for inset border */
 	height: 85px;
 	border-radius: 15px;
-	border-color: black;
-	background:Orange;
+	border: 2px solid #566573;
 }
 
-#tiretopleft{
-	width: 50px;
-	height: 85px;
-	border-radius: 15px;
-	border-color: black;
-	background: #8BC34A;
+#tire-top-right{
+	background-color: #FF9800;
+}
+
+#tire-top-left,
+#tire-bottom-right,
+#tire-bottom-left{
+	background-color: #8BC34A;
 }
 
 #tirebottomright{
