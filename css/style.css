@@ -8,12 +8,17 @@ body,html{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.container.blur{
+	background-image: url('../exports/background_blur.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 a{
 	color:white;
 }
 a:hover{
 	text-decoration: none;
-	color:black;
+	color:gray;
 }
 #speed{
 font-size: 50px;
