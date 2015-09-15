@@ -11,15 +11,24 @@
 
     <title>AUTO</title>
 
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> -->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
     <script src="js/bootstrap-switch.min.js"></script>
+
+    <link href="css/bootstrap-slider.css" rel="stylesheet">    
+    <script src="js/bootstrap-slider.js"></script>
+    
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    // <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+    <link href="css/style.css" rel="stylesheet"> 
     <script src="js/script.js"></script>
 
 </head>
@@ -36,22 +45,12 @@
 
     <div class="row">
         <div class="col-xs-6 col-sm-6 text-center">
-          <p>
-            <label for="amount">Volume:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-          </p>
- 
-          <div id="slider-vertical" style="height:200px;"></div>
+         <input id="ex4" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical"/>
         </div>
         
-        <div class="col-xs-6 col-sm-6 text-center">
-          <p>
-            <label for="amount">Volume:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-          </p>
- 
-            <div id="slider-vertical" style="height:200px;"></div>
-        </div>
+        <!-- <div class="col-xs-6 col-sm-6 text-center">
+            <input id="ex4" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="-3" data-slider-orientation="vertical"/>
+        </div> -->
     </div>
 
     <div class="row">
