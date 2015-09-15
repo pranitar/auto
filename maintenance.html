@@ -42,8 +42,7 @@
             <div class="col-xs-9">
                 <h4>Gas</h4>
             </div>
-            <div class="col-xs-3">
-                <h4>45%</h4>
+            <div class="col-xs-3", id="gas">
             </div>
         </div>
 
@@ -51,8 +50,7 @@
             <div class="col-xs-9">
                 <h4>Oil</h4>
             </div>
-            <div class="col-xs-3">
-                <h4>22%</h4>
+            <div class="col-xs-3", id="oil">
             </div>
         </div>
 
@@ -60,8 +58,7 @@
             <div class="col-xs-9">
                 <h4>Wiper Fluid</h4>
             </div>
-            <div class="col-xs-3">
-                <h4>87%</h4>
+            <div class="col-xs-3", id="wiper_fluid">
             </div>
         </div>
 
@@ -92,6 +89,13 @@
         </div>
 
     </div>
+
+<script>
+    var data = JSON.parse(localStorage.getItem("local"));
+    document.getElementById("gas").innerHTML = "<h4>"+ data.maintenance.gas +"%</h4>";
+    document.getElementById("oil").innerHTML = "<h4>"+ data.maintenance.oil +"%</h4>";
+    document.getElementById("wiper_fluid").innerHTML = "<h4>"+ data.maintenance.wiper_fluid +"%</h4>";
+</script>
 
 </body>
 

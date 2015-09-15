@@ -49,9 +49,7 @@
     <br>
 
      <div class="row">
-        <div class="col-xs-12 col-sm-12 text-center">
-          <h2>Toxic</h2>
-          <h3>Britney Spears</h3>
+        <div class="col-xs-12 col-sm-12 text-center", id = "song">
         </div>
     </div>
 
@@ -93,6 +91,13 @@
 
 
     </div>
+
+<script>
+    var data = JSON.parse(localStorage.getItem("local"));
+    data.entertainment.current_setting = "bluetooth";
+    document.getElementById("song").innerHTML = "<h2>"+ data.bluetooth.current_song +"</h2><h3>"+ data.bluetooth.current_artist +"</h3>";
+    localStorage.setItem("local", JSON.stringify(data));
+</script>
 </body>
 
 </html>

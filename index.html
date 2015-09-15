@@ -37,9 +37,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 text-center">
+            <div class="col-xs-6 col-sm-6 text-center", id = "entertainment">
                 <!-- will need to change; which page is opened depends on JS to retain state -->
-                <a href="entertainmentcd.html"><img src="exports/entertainment.svg" class="nav-icon"></a>
             </div>
             <div class="col-xs-6 col-sm-6 text-center">
                 <a href="maintenance.html"><img src="exports/maintenance.svg" class="nav-icon"></a>
@@ -59,6 +58,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var data = JSON.parse(localStorage.getItem("local"));
+        if(data.entertainment.current_setting == "CD")
+            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentcd.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+        else if(data.entertainment.current_setting == "radio")
+            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentradio.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+        else
+            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentbluetooth.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+    </script>
 </body>
 
 </html>
