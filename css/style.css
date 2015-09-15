@@ -8,6 +8,13 @@ body,html{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+a{
+	color:white;
+}
+a:hover{
+	text-decoration: none;
+	color:black;
+}
 #speed{
 font-size: 50px;
 }

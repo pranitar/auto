@@ -53,6 +53,12 @@ $(document).ready(function() {
       }
     });
     $( "#amount4" ).val( $( "#orientationslider" ).slider( "value" ) );
+
+    $("[name='entertainment']").bootstrapSwitch();
+    $("[name='maintenance']").bootstrapSwitch();
+    $("[name='routes']").bootstrapSwitch();
+    $("[name='performance']").bootstrapSwitch();
+    $("[name='climate']").bootstrapSwitch();
   });
 
   
