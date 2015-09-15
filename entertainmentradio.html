@@ -9,18 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>AUTO</title>
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-     <script src="js/script.js"></script>
-
-    <!-- Bootstrap Core CSS -->
-    
-    <link href="css/style.css" rel="stylesheet"> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
+    <script src="js/script.js"></script>
 
 
 </head>
@@ -31,7 +31,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-xs-2 col-sm-2"><center><a href="index.html">Back</a></center></div>     
+            <div class="col-xs-2 col-sm-2"><center><h3><a href="index.html">Back</a></h3></center></div>     
             <div class="col-xs-10 col-sm-10"><center><h1>Entertainment</h1></center></div>
         </div>
 
@@ -39,9 +39,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
             <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-default btn-lg">CD</button>
-            <button type="button" class="btn btn-default btn-lg">Radio</button>
-            <button type="button" class="btn btn-default btn-sm"><img src="exports/bluetooth.svg"></button>
+            <a class="btn btn-default btn-lg" href="entertainmentcd.html">CD</a>
+            <a class="btn btn-default btn-lg" href="entertainmentradio.html">Radio</a>
+            <a class="btn btn-default btn-sm" href="entertainmentbluetooth.html"><img src="exports/bluetooth.svg"></a>
             </div>
             </div>
         </div>
@@ -50,10 +50,31 @@
 
      <div class="row">
         <div class="col-xs-12 col-sm-12 text-center">
-          <h2>Toxic</h2>
-          <h3>Britney Spears</h3>
+          <h2>107.7 FM</h2>
         </div>
     </div>
+
+    <center>
+    <button type="button" class="btn btn-default btn-lg">99.5</button>
+    <button type="button" class="btn btn-default btn-lg">87.3</button>
+    <button type="button" class="btn btn-default btn-lg">101.2</button>
+</center>
+
+    <br><br>
+
+    <div class="row">
+        <div class="col-xs-4 text-center">
+          <img src="exports/ent_prev.svg">
+        </div>
+        <div class="col-xs-4 text-center">
+          <h3>Seek</h3>
+        </div>
+        <div class="col-xs-4 text-center">
+          <img src="exports/ent_next.svg">
+        </div>
+    </div>
+
+    <br>
 
     <div class="row">
         <div class="col-xs-6 col-sm-6 text-center">

@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
 
-	$( "#slider-vertical" ).slider({
+	$("#slider-vertical").slider({
       orientation: "vertical",
       range: "min",
       min: 0,

@@ -2,16 +2,15 @@ body,html{
 	background-color: grey;
 }
 .container{
-	width:375px;
+	width: 375px;
 }
-.bg{
+#bg{
+	width:375px;
 	background-image: url('../images/lexus_birdseye.jpg');
-	background-size: cover;
- -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+	background-repeat: no-repeat;
+}
+#speed{
+font-size: 50px;
 }
 img.nav-icon{
 width: 160px;
