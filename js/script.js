@@ -59,6 +59,72 @@ $(document).ready(function() {
     $("[name='routes']").bootstrapSwitch();
     $("[name='performance']").bootstrapSwitch();
     $("[name='climate']").bootstrapSwitch();
+
+    //create local storage if there isn't one
+    if(localStorage.getItem("local") == null){
+      var setting = {
+        entertainment:true,
+        maintenance:false,
+        routes:true,
+        performance:false,
+        climate:true
+      };
+
+      var entertainment = {
+        current_setting:"CD",
+        volume:50,
+        orientation:75
+      };
+
+      var CD = {
+        current_song:"Something Good",
+        current_artist:"Alt-J"
+      };
+
+      var radio = {
+        current_station:107.7
+      };
+
+      var bluetooth = {
+        current_song:"Toxic",
+        current_artist:"Britney Spears"
+      };
+
+      var climate = {
+        air:50,
+        temperature:75,
+        direction:"head_only"
+      };
+
+      var maintenance = {
+        gas:40,
+        oil:22,
+        wiper_fluid:87,
+        tire_pressure:[99, 86, 54, 32]
+      };
+
+      var performance = {
+        mph:48,
+        avg_mph:27,
+        miles:10205,
+        this_trip:1004
+      };
+
+      var route1 = {
+        name: "Begin Commute",
+        time: "9:00",
+        of_day: "AM",
+        repeat: "Weekdays",
+        type: "personal",
+        active: true
+      };
+
+      var routes = [route1];
+
+      var set = {setting:setting, entertainment:entertainment, CD:CD, radio:radio, bluetooth:bluetooth, climate:climate, maintenance:maintenance, performance:performance, routes:routes};
+
+      localStorage.setItem("local", JSON.stringify(set));
+    }
   });
 
   

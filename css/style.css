@@ -62,19 +62,33 @@ input.ios-toggle:checked + label:after {
 
 body,html{
 	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	color: #566573;
 }
 .container{
 	width: 375px;
-	height:545px;
-	background-image: url('../images/lexus_birdseye.jpg');
+	height:667px;
+	background-image: url('../exports/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 .container.blur{
 	background-image: url('../exports/background_blur.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 }
+
+.row {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.h2 { 
+	font-size: 28px; 
+	text-align: center;
+}
+.h3 { 
+	font-size: 24px;
+}
+
 a{
 	color:black;
 }
@@ -82,48 +96,50 @@ a:hover{
 	text-decoration: none;
 	color:gray;
 }
+
 #speed{
-font-size: 50px;
+	font-size: 50px;
 }
+
 img.nav-icon{
+/*<<<<<<< HEAD
 width: 150px;
 height: 150px;
 border-radius: 20px;
 background-color: white;
 opacity: 0.95;
-blur: 40px; /* I don’t know the vendor prefixes for this */
+blur: 40px; /* I don’t know the vendor prefixes for this 
 padding: 40px;
 margin: 5px;
+}*/
+
+	width: 150px;
+	height: 150px;
+	border-radius: 20px;
+	background-color: white;
+	opacity: 1;
+	/*-webkit-filter: blur(30px);
+	  -moz-filter: blur(30px);
+	  -o-filter: blur(30px);
+	  -ms-filter: blur(30px);
+	  filter: blur(30px);*/
+	padding: 40px;
+	margin: 5px;
 }
 
-#tiretopright{
-width: 50px;
-height: 85px;
-border-radius: 15px;
-border-color: black;
- background:Orange;
+.tire {
+	width: 46px; /* makes up for inset border */
+	height: 85px;
+	border-radius: 15px;
+	border: 2px solid #566573;
 }
 
-#tiretopleft{
-width: 50px;
-height: 85px;
-border-radius: 15px;
-border-color: black;
- background:SpringGreen;
+#tire-top-right{
+	background-color: #FF9800;
 }
 
-#tirebottomright{
-width: 50px;
-height: 85px;
-border-radius: 15px;
-border-color: black;
- background:SpringGreen;
-}
-
-#tirebottomleft{
-width: 50px;
-height: 85px;
-border-radius: 15px;
-border-color: black;
- background:SpringGreen;
+#tire-top-left,
+#tire-bottom-right,
+#tire-bottom-left{
+	background-color: #8BC34A;
 }
