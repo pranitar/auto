@@ -63,6 +63,7 @@ input.ios-toggle:checked + label:after {
 body,html{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
+	color: #566573;
 }
 .container{
 	width: 375px;
@@ -73,6 +74,19 @@ body,html{
 }
 .container.blur{
 	background-image: url('../exports/background_blur.png');
+}
+
+.row {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.h2 { 
+	font-size: 28px; 
+	text-align: center;
+}
+.h3 { 
+	font-size: 24px;
 }
 
 a{
@@ -118,20 +132,4 @@ img.nav-icon{
 #tire-bottom-right,
 #tire-bottom-left{
 	background-color: #8BC34A;
-}
-
-#tirebottomright{
-	width: 50px;
-	height: 85px;
-	border-radius: 15px;
-	border-color: black;
-	background: #8BC34A;
-}
-
-#tirebottomleft{
-	width: 50px;
-	height: 85px;
-	border-radius: 15px;
-	border-color: black;
-	background: #8BC34A;
 }
