@@ -1,7 +1,6 @@
-
 /* toggle styling from http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/ */
 /* remove default styling */
-input.ios-toggle{
+input.ios-toggle {
 	max-height: 0;
 	max-width: 0;
 	opacity: 0;
