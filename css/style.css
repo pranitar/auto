@@ -24,6 +24,34 @@ padding: 40px;
 margin: 5px;
 }
 
-/* Music Note Icon: */
-/*background: #566573;
-border-radius: 10px;*/
+#tiretopright{
+width: 50px;
+height: 100px;
+border-radius: 18px;
+border-color: black;
+ background:Orange;
+}
+
+#tiretopleft{
+width: 50px;
+height: 100px;
+border-radius: 18px;
+border-color: black;
+ background:SpringGreen;
+}
+
+#tirebottomright{
+width: 50px;
+height: 100px;
+border-radius: 18px;
+border-color: black;
+ background:SpringGreen;
+}
+
+#tirebottomleft{
+width: 50px;
+height: 100px;
+border-radius: 18px;
+border-color: black;
+ background:SpringGreen;
+}

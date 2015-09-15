@@ -5,8 +5,9 @@
 // 	// })
 // })
 
-$(function() {
-    $( "#slider-vertical" ).slider({
+$(document).ready(function() {
+
+	$( "#slider-vertical" ).slider({
       orientation: "vertical",
       range: "min",
       min: 0,
@@ -17,4 +18,14 @@ $(function() {
       }
     });
     $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
-  });
+
+    $("[name='my-checkbox']").bootstrapSwitch();
+
+    //Code
+});
+
+// $(function() {
+    
+//   });
+
+  
