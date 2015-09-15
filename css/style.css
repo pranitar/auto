@@ -63,18 +63,17 @@ input.ios-toggle:checked + label:after {
 
 body,html{
 	background-color: white;
+	font-family: 'Roboto', sans-serif;
 }
 .container{
 	width: 375px;
-	height:545px;
-	background-image: url('../images/lexus_birdseye.jpg');
+	height:667px;
+	background-image: url('../exports/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 .container.blur{
 	background-image: url('../exports/background_blur.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 a{
 	color:white;
@@ -92,7 +91,11 @@ height: 150px;
 border-radius: 20px;
 background-color: white;
 opacity: 0.8;
-blur: 30px; /* I don’t know the vendor prefixes for this */
+/*-webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);*/
 padding: 40px;
 margin: 5px;
 }
@@ -110,7 +113,7 @@ width: 50px;
 height: 85px;
 border-radius: 15px;
 border-color: black;
- background:SpringGreen;
+ background: #8BC34A;
 }
 
 #tirebottomright{
@@ -118,7 +121,7 @@ width: 50px;
 height: 85px;
 border-radius: 15px;
 border-color: black;
- background:SpringGreen;
+ background: #8BC34A;
 }
 
 #tirebottomleft{
@@ -126,5 +129,5 @@ width: 50px;
 height: 85px;
 border-radius: 15px;
 border-color: black;
- background:SpringGreen;
+ background: #8BC34A;
 }
