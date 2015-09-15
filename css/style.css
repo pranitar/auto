@@ -76,7 +76,7 @@ body,html{
 	background-repeat: no-repeat;
 }
 a{
-	color:white;
+	color:black;
 }
 a:hover{
 	text-decoration: none;
@@ -90,8 +90,8 @@ width: 150px;
 height: 150px;
 border-radius: 20px;
 background-color: white;
-opacity: 0.8;
-blur: 30px; /* I don’t know the vendor prefixes for this */
+opacity: 0.95;
+blur: 40px; /* I don’t know the vendor prefixes for this */
 padding: 40px;
 margin: 5px;
 }
