@@ -28,6 +28,7 @@ input.ios-toggle + label:before {
 	left: 0;
 	border-radius: 15px;
 	background: rgba(19, 191, 17, 0);
+	/*background: white;*/
 	-moz-transition: .25s ease-in-out;
 	-webkit-transition: .25s ease-in-out;
 	transition: .25s ease-in-out;
@@ -52,12 +53,12 @@ input.ios-toggle + label:after {
 
 input.ios-toggle:checked + label:before {
 	width: 50px;
-	background: rgba(19, 191, 17, 1);
+	background: #566573;
 }
 
 input.ios-toggle:checked + label:after {
 	left: 20px;
-	box-shadow: inset 0 0 0 1px rgba(19, 191, 17, 1), 0 2px 4px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 0 0 1px #566573, 0 2px 4px rgba(0, 0, 0, .2);
 }
 
 body,html{
@@ -90,7 +91,7 @@ body,html{
 }
 
 a{
-	color:black;
+	color:#566573;
 }
 a:hover{
 	text-decoration: none;
@@ -102,22 +103,11 @@ a:hover{
 }
 
 img.nav-icon{
-/*<<<<<<< HEAD
-width: 150px;
-height: 150px;
-border-radius: 20px;
-background-color: white;
-opacity: 0.95;
-blur: 40px; /* I don’t know the vendor prefixes for this 
-padding: 40px;
-margin: 5px;
-}*/
-
 	width: 150px;
 	height: 150px;
 	border-radius: 20px;
-	background-color: white;
-	opacity: 1;
+	background-color: rgba(255,255,255,0.95);
+	/*opacity: 1;*/
 	/*-webkit-filter: blur(30px);
 	  -moz-filter: blur(30px);
 	  -o-filter: blur(30px);
@@ -125,6 +115,11 @@ margin: 5px;
 	  filter: blur(30px);*/
 	padding: 40px;
 	margin: 5px;
+}
+
+.ent-btn {
+	height: 65px;
+	line-height: 45px; /* hack to stick make buttons equal height */
 }
 
 .tire {
