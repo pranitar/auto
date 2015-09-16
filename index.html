@@ -63,13 +63,10 @@
             // console.log('hi')
             // if we haven't stuck an icon in yet...
             var that = $($('.col-xs-6')[i]);
-            console.log(that);
             if (that.children().length === 0) {
-                console.log('hi')
                 // add one that hasn't been covered
                 for (var j = 0; j < available_icons.length; j++) {
                     var icon = available_icons[j];
-                    console.log(icon)
                     if (data.setting[icon]) {
                         // check if entertainment, since there are different urls
                         if (icon === 'entertainment') {
