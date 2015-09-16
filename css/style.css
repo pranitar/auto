@@ -61,6 +61,16 @@ input.ios-toggle:checked + label:after {
 	box-shadow: inset 0 0 0 1px #566573, 0 2px 4px rgba(0, 0, 0, .2);
 }
 
+input.ios-toggle.ios-toggle-maintenance:checked + label:before {
+	width: 50px;
+	background: #FF9800;
+}
+
+input.ios-toggle.ios-toggle-maintenance:checked + label:after {
+	left: 20px;
+	box-shadow: inset 0 0 0 1px #FF9800, 0 2px 4px rgba(0, 0, 0, .2);
+}
+
 body,html{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
@@ -120,6 +130,11 @@ img.nav-icon{
 .ent-btn {
 	height: 65px;
 	line-height: 45px; /* hack to stick make buttons equal height */
+}
+
+.climate-btn {
+	background: rgba(255,255,255,1);
+	/*border: none;*/
 }
 
 .tire {

@@ -33,7 +33,59 @@
             <div class="col-xs-3"><span class="h3 back"><a href="add_routes.html"><img src="exports/add.png" /></a></span></div> 
         </div>
 
+
     </div>
+
+    <script>
+    $(function() {
+        var data = JSON.parse(localStorage.getItem("local"));
+        var routes = data.routes;
+        console.log(routes);
+        for (var i = 0; i < routes.length; i++) {
+            var r = routes[i];
+            // check if maintenance
+            if (r.type === "maintenance") {
+                var tog = " ios-toggle-maintenance";
+            } else {
+                var tog = "";
+            }
+            // check if active
+            if (r.active) {
+                var checked = "checked";
+            } else {
+                var checked = "";
+            }
+            // make sure routes don't have same first word
+            $('.container').append('<div class="row">'+
+                                        '<div class="col-xs-9">'+
+                                            '<span class="h2">'+r.name+'</span>'+
+                                            '<br>'+
+                                            '<span class="h4">'+r.time+','+r.repeat+'</span>'+
+                                        '</div>'+
+                                        '<div class="col-xs-3">'+
+                                            '<div class="wrapper">'+
+                                                '<input type="checkbox" name="routes-'+r.name.split(' ')[0]+'-toggle" id="routes-'+r.name.split(' ')[0]+'-toggle" class="ios-toggle'+tog+'"'+checked+'>'+
+                                                '<label for="routes-'+r.name.split(' ')[0]+'-toggle"></label>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="row" style="border-bottom: 2px solid #566573; margin:0px 13px 0px 2px;"></div>')
+        }
+
+        // checkbox change handler
+        // $('input.ios-toggle').change(function() {
+        //     var setting_key = $(this).attr('id').split('-')[0];
+        //     if (this.checked) {
+        //         local.setting[setting_key] = true
+        //         console.log(local.setting);
+        //         localStorage.local = JSON.stringify(local);
+        //     } else {
+        //         local.setting[setting_key] = false
+        //         localStorage.local = JSON.stringify(local);
+        //     }
+        // })
+    })
+    </script>
 </body>
 
 </html>

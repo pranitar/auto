@@ -136,14 +136,29 @@ $(document).ready(function() {
 
       var route1 = {
         name: "Begin Commute",
-        time: "9:00",
-        of_day: "AM",
+        time: "9:00 AM",
         repeat: "Weekdays",
         type: "personal",
         active: true
       };
 
-      var routes = [route1];
+      var route2 = {
+      	name: "Pick up kids",
+        time: "3:30 PM",
+        repeat: "Weekdays",
+        type: "personal",
+        active: true
+      }
+
+      var route3 = {
+      	name: "Oil Change",
+        time: "12:00 PM",
+        repeat: "Saturday",
+        type: "maintenance",
+        active: true
+      }
+
+      var routes = [route1, route2, route3];
 
       var set = {setting:setting, entertainment:entertainment, CD:CD, radio:radio, bluetooth:bluetooth, climate:climate, maintenance:maintenance, performance:performance, routes:routes};
 
