@@ -37,23 +37,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6" id="entertainment">
+            <div class="col-xs-6 col-sm-6">
             </div>
             <div class="col-xs-6 col-sm-6">
-                <a href="maintenance.html"><img src="exports/maintenance.svg" class="nav-icon"></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-6">
-                <a href="routes.html"><img src="exports/routes.svg" class="nav-icon"></a>
-            </div>
-            <div class="col-xs-6 col-sm-6">
-                <a href="climate.html"><img src="exports/climate.svg" class="nav-icon"></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-6">
-                <a href="performance.html"><img src="exports/performance.svg" class="nav-icon"></a>
+            </div>
+            <div class="col-xs-6 col-sm-6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6">
             </div>
         </div>
     </div>
@@ -62,34 +58,35 @@
     $(function() {
         // draw in a tags if setting is true
         var data = JSON.parse(localStorage.getItem("local"));
-        var available_icons 
+        var available_icons = ['entertainment', 'maintenance','routes','climate','performance'];
         for (var i = 0; i < $('.col-xs-6').length; i++) {
+            // console.log('hi')
             // if we haven't stuck an icon in yet...
-            if ($('.col-xs-6').children().length === 0) {
+            var that = $($('.col-xs-6')[i]);
+            console.log(that);
+            if (that.children().length === 0) {
+                console.log('hi')
                 // add one that hasn't been covered
+                for (var j = 0; j < available_icons.length; j++) {
+                    var icon = available_icons[j];
+                    console.log(icon)
+                    if (data.setting[icon]) {
+                        // check if entertainment, since there are different urls
+                        if (icon === 'entertainment') {
+                            var new_icon = icon+data.entertainment.current_setting.toLowerCase();
+                        } else {
+                            var new_icon = icon;
+                        }
+                        that.html('<a href="'+new_icon+'.html"><img src="exports/'+icon+'.svg" class="nav-icon"></a>');
+                        break;
+                    }
+                }
+                available_icons.splice(available_icons.indexOf(icon),1);
             }
         }
+        // don't need to save back into localstorage because this runs off of settings 
     })
 
-    </script>
-    <script>
-        $(function() {
-            var data = JSON.parse(localStorage.getItem("local"));
-            // only add icon wrappers if setting for it is true
-
-            // first check that entertainment is desired
-            if (data.setting.entertainment) {
-                if(data.entertainment.current_setting == "CD") {
-                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentcd.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
-                }
-                else if(data.entertainment.current_setting == "radio") {
-                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentradio.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
-                }
-                else {
-                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentbluetooth.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
-                }
-            }
-        })
     </script>
 </body>
 
