@@ -37,8 +37,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 text-center" id="entertainment">
-                <!-- will need to change; which page is opened depends on JS to retain state -->
+            <div class="col-xs-6 col-sm-6" id="entertainment">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <a href="maintenance.html"><img src="exports/maintenance.svg" class="nav-icon"></a>
@@ -60,13 +59,37 @@
     </div>
 
     <script>
+    $(function() {
+        // draw in a tags if setting is true
         var data = JSON.parse(localStorage.getItem("local"));
-        if(data.entertainment.current_setting == "CD")
-            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentcd.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
-        else if(data.entertainment.current_setting == "radio")
-            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentradio.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
-        else
-            document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentbluetooth.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+        var available_icons 
+        for (var i = 0; i < $('.col-xs-6').length; i++) {
+            // if we haven't stuck an icon in yet...
+            if ($('.col-xs-6').children().length === 0) {
+                // add one that hasn't been covered
+            }
+        }
+    })
+
+    </script>
+    <script>
+        $(function() {
+            var data = JSON.parse(localStorage.getItem("local"));
+            // only add icon wrappers if setting for it is true
+
+            // first check that entertainment is desired
+            if (data.setting.entertainment) {
+                if(data.entertainment.current_setting == "CD") {
+                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentcd.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+                }
+                else if(data.entertainment.current_setting == "radio") {
+                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentradio.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+                }
+                else {
+                    document.getElementById("entertainment").innerHTML = "<a href=\"entertainmentbluetooth.html\"><img src=\"exports/entertainment.svg\" class=\"nav-icon\"></a>";
+                }
+            }
+        })
     </script>
 </body>
 
