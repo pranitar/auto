@@ -31,9 +31,9 @@
     <div class="container blur">
 
         <div class="row">
-            <div class="col-xs-3"><span class="h3 back"><a href="index.html"><img src="exports/back.svg" /></a></span></div>     
+            <div class="col-xs-3"><span class="h3 back"><a href="routes.html"><img src="exports/back.svg" /></a></span></div>     
             <div class="col-xs-6"><span class="h2" style="margin-left:18px">Add Route</span></div>
-            <div class="col-xs-3"><div class="h4" style="margin-top:6px;margin-left:15px">Save</div></div> <!-- window redirect onclick -->
+            <div class="col-xs-3"><div class="h4" id="save" style="margin-top:6px;margin-left:15px;pointer:cursor;">Save</div></div> <!-- window redirect onclick -->
         </div>
 
         <div class="row">
@@ -62,23 +62,52 @@
             <div class="col-xs-12">
                 <label for="repeat">Repeat</label><br>
                 <label for="repeat">Mon</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Monday">&nbsp;
                 <label for="repeat">Tues</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Tuesday">&nbsp;
                 <label for="repeat">Wed</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Wednesday">&nbsp;
                 <label for="repeat">Thurs</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Thursday">&nbsp;
                 <label for="repeat">Fri</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Friday">&nbsp;
                 <label for="repeat">Sat</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Saturday">&nbsp;
                 <label for="repeat">Sun</label>
-                <input type="checkbox" name="entertainment-toggle" id="entertainment-toggle">&nbsp;
+                <input type="checkbox" name="" value="Sunday">&nbsp;
             </div>
         </div>
 
     </div>
+
+    <script>
+    $(function() {
+        var data = JSON.parse(localStorage.getItem("local"));
+        $('#save').click(function() {
+            var name = $('label[for="name"] + input').val();
+            // this doesn't actually keep track of start / end / date
+            var time = $('label[for="time"] + input').val();
+            var repeat = ""
+            for (var i = 0; i < $('input[type="checkbox"]').length; i++) {
+                if ($('input[type="checkbox"]')[i].checked) {
+                    repeat += ", " + $('input[type="checkbox"]')[i].value;
+                }
+            }
+            console.log(name, time, repeat);
+            var route = {
+                name: name,
+                time: time,
+                repeat: repeat.substring(2,repeat.length),
+                type: "personal",
+                active: true
+            }
+            data.routes.push(route);
+            localStorage.local = JSON.stringify(data);
+            window.location.href="routes.html";
+        })
+    })
+
+    </script>
 
 </body>
 

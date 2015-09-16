@@ -85,7 +85,7 @@ $(document).ready(function() {
     $("[name='climate']").bootstrapSwitch();
 
     //create local storage if there isn't one
-    if(localStorage.getItem("local") == null){
+    if(localStorage.getItem("local") == null || localStorage.getItem("local") == "null"){
       var setting = {
         entertainment:true,
         maintenance:false,

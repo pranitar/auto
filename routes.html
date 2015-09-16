@@ -55,12 +55,20 @@
             } else {
                 var checked = "";
             }
+            // special repeat cases
+            if (r.repeat === "Monday, Tuesday, Wednesday, Thursday, Friday") {
+                r.repeat = "Weekdays";
+            } else if (r.repeat === "Saturday, Sunday") {
+                r.repeat = "Weekends";
+            } else if (r.repeat === "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday") {
+                r.repeat = "Every Day";
+            }
             // make sure routes don't have same first word
             $('.container').append('<div class="row">'+
                                         '<div class="col-xs-9">'+
                                             '<span class="h2">'+r.name+'</span>'+
                                             '<br>'+
-                                            '<span class="h4">'+r.time+','+r.repeat+'</span>'+
+                                            '<span class="h4">'+r.time+', '+r.repeat+'</span>'+
                                         '</div>'+
                                         '<div class="col-xs-3">'+
                                             '<div class="wrapper">'+
