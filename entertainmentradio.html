@@ -53,9 +53,9 @@
     </div>
 
     <center>
-    <button type="button" class="btn btn-default btn-lg">99.5</button>
-    <button type="button" class="btn btn-default btn-lg">87.3</button>
-    <button type="button" class="btn btn-default btn-lg">101.2</button>
+    <button type="button" class="btn btn-default btn-lg station-btn">99.5</button>
+    <button type="button" class="btn btn-default btn-lg station-btn">87.3</button>
+    <button type="button" class="btn btn-default btn-lg station-btn">101.2</button>
 </center>
 
     <br><br>
@@ -96,10 +96,20 @@
 
     </div>
 <script>
-    var data = JSON.parse(localStorage.getItem("local"));
-    data.entertainment.current_setting = "radio";
-    document.getElementById("station").innerHTML = "<h2>"+ data.radio.current_station +" FM</h2>";
-    localStorage.setItem("local", JSON.stringify(data));
+    $(function() {
+        var data = JSON.parse(localStorage.getItem("local"));
+        data.entertainment.current_setting = "radio";
+        document.getElementById("station").innerHTML = "<h2>"+ data.radio.current_station +" FM</h2>";
+        localStorage.setItem("local", JSON.stringify(data));
+
+        // change station
+        $('.station-btn').click(function() {
+            data.radio.current_station = $(this).text();
+            document.getElementById("station").innerHTML = "<h2>"+ data.radio.current_station +" FM</h2>";
+            localStorage.setItem("local", JSON.stringify(data));
+        })
+
+    })
 </script>
 </body>
 
