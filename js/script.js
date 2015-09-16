@@ -106,7 +106,7 @@ $(document).ready(function() {
       };
 
       var radio = {
-        current_station:107.7
+        current_station:"107.7"
       };
 
       var bluetooth = {
