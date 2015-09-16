@@ -6,50 +6,74 @@
 // })
 
 $(document).ready(function() {
+    if(localStorage.getItem("airvalue") == null)
+      localStorage.setItem("airvalue", 60);
+    var airval = localStorage.getItem("airvalue");
     $('#airslider').slider({
       orientation: "vertical",
       range: "min",
       min: 0,
       max: 100,
-      value: 60,
+      value: airval,
       slide: function( event, ui ) {
         $( "#amount1" ).val( ui.value );
+      },
+      stop: function( event, ui ){
+        localStorage.setItem("airvalue", ui.value);
       }
     });
     $( "#amount1" ).val( $( "#airslider" ).slider( "value" ) );
 
+    if(localStorage.getItem("tempvalue") == null)
+      localStorage.setItem("tempvalue", 60);
+    var tempval = localStorage.getItem("tempvalue");
     $('#tempslider').slider({
       orientation: "vertical",
       range: "min",
       min: 0,
       max: 100,
-      value: 60,
+      value: tempval,
       slide: function( event, ui ) {
-        $( "#amount2" ).val( ui.value );
+        $( "#amount1" ).val( ui.value );
+      },
+      stop: function( event, ui ){
+        localStorage.setItem("tempvalue", ui.value);
       }
     });
     $( "#amount2" ).val( $( "#tempslider" ).slider( "value" ) );
 
+    if(localStorage.getItem("volumevalue") == null)
+      localStorage.setItem("volumevalue", 60);
+    var volumeval = localStorage.getItem("volumevalue");
     $('#volumeslider').slider({
       orientation: "vertical",
       range: "min",
       min: 0,
       max: 100,
-      value: 60,
+      value: volumeval,
       slide: function( event, ui ) {
         $( "#amount3" ).val( ui.value );
+      },
+      stop: function( event, ui ){
+        localStorage.setItem("volumevalue", ui.value);
       }
     });
     $( "#amount3" ).val( $( "#volumeslider" ).slider( "value" ) );
 
+    if(localStorage.getItem("orientationvalue") == null)
+      localStorage.setItem("orientationvalue", 60);
+    var orientationval = localStorage.getItem("orientationvalue");
     $('#orientationslider').slider({
       orientation: "vertical",
       range: "min",
       min: 0,
       max: 100,
-      value: 60,
+      value: orientationval,
       slide: function( event, ui ) {
         $( "#amount4" ).val( ui.value );
+      },
+      stop: function( event, ui ){
+        localStorage.setItem("orientationvalue", ui.value);
       }
     });
     $( "#amount4" ).val( $( "#orientationslider" ).slider( "value" ) );
